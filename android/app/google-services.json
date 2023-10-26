@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "903851235539",
+    "project_id": "coursemaster-4c59f",
+    "storage_bucket": "coursemaster-4c59f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903851235539:android:046db998e483242cab5c26",
+        "android_client_info": {
+          "package_name": "com.mycompany.coursemaster"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqCFwvXIqLZAmI-vVchN3JsaUmKOVlr5E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
