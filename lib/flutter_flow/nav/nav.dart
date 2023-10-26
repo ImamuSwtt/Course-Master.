@@ -181,6 +181,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'quizCopyCopy',
           path: '/quizCopyCopy',
           builder: (context, params) => QuizCopyCopyWidget(),
+        ),
+        FFRoute(
+          name: 'SUPCopy',
+          path: '/sUPCopy',
+          builder: (context, params) => SUPCopyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],

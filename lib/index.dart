@@ -25,3 +25,4 @@ export '/chaoter5_vid_c_s125/chaoter5_vid_c_s125_widget.dart'
 export '/pages/quiz_copy/quiz_copy_widget.dart' show QuizCopyWidget;
 export '/pages/quiz_copy_copy/quiz_copy_copy_widget.dart'
     show QuizCopyCopyWidget;
+export '/pages/s_u_p_copy/s_u_p_copy_widget.dart' show SUPCopyWidget;
