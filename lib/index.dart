@@ -26,3 +26,12 @@ export '/pages/quiz_copy/quiz_copy_widget.dart' show QuizCopyWidget;
 export '/pages/quiz_copy_copy/quiz_copy_copy_widget.dart'
     show QuizCopyCopyWidget;
 export '/pages/s_u_p_copy/s_u_p_copy_widget.dart' show SUPCopyWidget;
+export '/excercise/excercise_widget.dart' show ExcerciseWidget;
+export '/c_s125_exerciseschapter1/c_s125_exerciseschapter1_widget.dart'
+    show CS125Exerciseschapter1Widget;
+export '/c_s125_exercises_chapter2/c_s125_exercises_chapter2_widget.dart'
+    show CS125ExercisesChapter2Widget;
+export '/c_s125_execises_chapter3/c_s125_execises_chapter3_widget.dart'
+    show CS125ExecisesChapter3Widget;
+export '/c_s125_execises_chapter4/c_s125_execises_chapter4_widget.dart'
+    show CS125ExecisesChapter4Widget;

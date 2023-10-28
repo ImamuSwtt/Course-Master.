@@ -186,6 +186,31 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'SUPCopy',
           path: '/sUPCopy',
           builder: (context, params) => SUPCopyWidget(),
+        ),
+        FFRoute(
+          name: 'Excercise',
+          path: '/excercise',
+          builder: (context, params) => ExcerciseWidget(),
+        ),
+        FFRoute(
+          name: 'CS125Exerciseschapter1',
+          path: '/cS125Exerciseschapter1',
+          builder: (context, params) => CS125Exerciseschapter1Widget(),
+        ),
+        FFRoute(
+          name: 'CS125ExercisesChapter2',
+          path: '/cS125ExercisesChapter2',
+          builder: (context, params) => CS125ExercisesChapter2Widget(),
+        ),
+        FFRoute(
+          name: 'CS125ExecisesChapter3',
+          path: '/cS125ExecisesChapter3',
+          builder: (context, params) => CS125ExecisesChapter3Widget(),
+        ),
+        FFRoute(
+          name: 'CS125ExecisesChapter4',
+          path: '/cS125ExecisesChapter4',
+          builder: (context, params) => CS125ExecisesChapter4Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
