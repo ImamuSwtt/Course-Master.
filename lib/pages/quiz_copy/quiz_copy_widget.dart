@@ -244,7 +244,7 @@ class _QuizCopyWidgetState extends State<QuizCopyWidget>
                                       controller: _model
                                               .checkboxGroupValueController ??=
                                           FormFieldController<List<String>>(
-                                        [''],
+                                        ['option1'],
                                       ),
                                       activeColor:
                                           FlutterFlowTheme.of(context).primary,

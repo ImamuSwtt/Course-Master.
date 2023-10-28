@@ -79,18 +79,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? CourseslistWidget() : SupWidget(),
+          appStateNotifier.loggedIn ? CourseslistWidget() : AuthenticatWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? CourseslistWidget() : SupWidget(),
-        ),
-        FFRoute(
-          name: 'SUP',
-          path: '/sup',
-          builder: (context, params) => SupWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? CourseslistWidget()
+              : AuthenticatWidget(),
         ),
         FFRoute(
           name: 'CS151',
@@ -121,16 +117,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'courseslistCopy',
           path: '/courseslistCopy',
           builder: (context, params) => CourseslistCopyWidget(),
-        ),
-        FFRoute(
-          name: 'SIN',
-          path: '/sin',
-          builder: (context, params) => SinWidget(),
-        ),
-        FFRoute(
-          name: 'AuthenticateSolo1',
-          path: '/authenticateSolo1',
-          builder: (context, params) => AuthenticateSolo1Widget(),
         ),
         FFRoute(
           name: 'Profile',
@@ -183,11 +169,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => QuizCopyCopyWidget(),
         ),
         FFRoute(
-          name: 'SUPCopy',
-          path: '/sUPCopy',
-          builder: (context, params) => SUPCopyWidget(),
-        ),
-        FFRoute(
           name: 'Excercise',
           path: '/excercise',
           builder: (context, params) => ExcerciseWidget(),
@@ -211,6 +192,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'CS125ExecisesChapter4',
           path: '/cS125ExecisesChapter4',
           builder: (context, params) => CS125ExecisesChapter4Widget(),
+        ),
+        FFRoute(
+          name: 'Authenticat',
+          path: '/authenticat',
+          builder: (context, params) => AuthenticatWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: [routeObserver],
@@ -378,7 +364,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/sup';
+            return '/authenticat';
           }
           return null;
         },
